@@ -1,0 +1,1 @@
+excluded_strings = "','".join([row["name"] for row in rows])

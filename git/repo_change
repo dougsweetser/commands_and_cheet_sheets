@@ -1,0 +1,3 @@
+git remote set-url origin git@sig-gitlab.internal.synopsys.com:blackduck/kb/kb-hadoop/iscan.git
+
+git remote set-url origin git@sig-gitlab.internal.synopsys.com:blackduck/kb/kb-classic/Blackduck.git

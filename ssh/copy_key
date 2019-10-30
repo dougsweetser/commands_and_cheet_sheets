@@ -1,0 +1,2 @@
+ssh-copy-id   # May have to install
+cat ~/.ssh/id_rsa.pub | ssh the_machine.com 'cat >> .ssh/authorized_keys'

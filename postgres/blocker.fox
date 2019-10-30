@@ -1,0 +1,1 @@
+SELECT pid, query FROM pg_stat_activity where client_addr = '10.2.74.23' or client_addr = '10.32.98.237'; ROLLBACK;

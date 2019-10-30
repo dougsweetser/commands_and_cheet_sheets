@@ -1,0 +1,17 @@
+edit .ssh/config
+
+Host home
+    User sauto
+    Port 22
+    Hostname scm
+    IdentityFile ~/.ssh/id_dmp
+
+then 
+sudo service ssh restart
+
+cd git repo
+
+ssh remote add origin_home home:path/to/repo
+
+to push
+ssh push origin_home master

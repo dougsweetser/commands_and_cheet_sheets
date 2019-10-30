@@ -1,0 +1,1 @@
+pg_dumpall --globals-only | tee globals.sql

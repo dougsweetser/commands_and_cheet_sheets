@@ -1,0 +1,3 @@
+alter table x add column id serial;
+update x set id = default;
+alter table x add primary key(id);

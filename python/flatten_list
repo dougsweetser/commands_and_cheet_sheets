@@ -1,0 +1,1 @@
+flat = [y for x in rows for y in x]

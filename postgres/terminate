@@ -1,0 +1,3 @@
+select pid from pg_state_activity where query ~ '';
+
+select pg_terminate_backend(pid);

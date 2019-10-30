@@ -1,0 +1,22 @@
+https://docs.continuum.io/anaconda-cloud/using#Packages
+http://pythonvision.org/basic-tutorial/
+
+1x:
+conda install anaconda-client anaconda-build
+conda config --add channels sweetser
+
+Per project...
+
+download package.tar.gz
+uppack
+cd package
+
+build it:
+python setup.py sdist
+
+upload:
+anaconda upload dist/package-1.4.1.tar.gz
+
+pip install:
+pip install --extra-index-url https://pypi.anaconda.org/sweetser/package package
+

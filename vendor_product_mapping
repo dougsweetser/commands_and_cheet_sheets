@@ -1,0 +1,15 @@
+# Spreadsheet:
+https://bds365-my.sharepoint.com/:x:/r/personal/adapkiewicz_blackducksoftware_com/_layouts/15/Doc.aspx?sourcedoc=%7B7477ca82-cf9f-4da5-b0fd-d5d040bf6540%7D&action=default
+
+# command-line
+id_info_kb -i whatever -w
+
+# splunk
+https://prd-kb-splunk01.dc2.lan:8000/en-US/app/security_quality/product_channel_table?form.product_id_token=10571&form.source_token=source%3D%22cve_cpe%22&form.severity_token=severities%3D%22.%2B%22&form.year=0&form.state_code_token=-999
+
+# example URLs
+http://kbdash.dc2.lan/nvd/product_detail/10571
+
+# nack:
+http://nack.dc2.lan/dash/search.html
+

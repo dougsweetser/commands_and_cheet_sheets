@@ -1,0 +1,12 @@
+Fixing a hosed brew:
+http://stackoverflow.com/questions/24652996/homebrew-not-working-on-osx
+First, open terminal and cd /usr/local/, and git status to see 
+if Homebrew is clean.
+
+if dirty, git reset --hard && git clean -df
+
+then brew doctor 
+Fix as many issues as you can.
+
+> brew update
+> brew upgrade --all

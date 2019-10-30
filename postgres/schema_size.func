@@ -1,0 +1,4 @@
+CREATE OR REPLACE FUNCTION pg_schema_size_2(text) RETURNS TEXT AS $$
+SELECT pg_size_pretty(SUM(pg_total_relation_size(quote_ident(schemaname) || 
+    '.' || quote_ident(tablename))))::text FROM pg_tables WHERE schemaname = $1
+$$ LANGUAGE SQL;

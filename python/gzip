@@ -1,0 +1,6 @@
+        psql_in = open(self.output_file, 'rb')
+        psql_out_name = "{0}.gz".format(self.output_file)
+        psql_out = gzip.open(psql_out_name, 'wb')
+        psql_out.writelines(psql_in)
+        psql_out.close()
+        psql_in.close()
