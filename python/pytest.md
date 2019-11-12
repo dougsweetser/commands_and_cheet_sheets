@@ -31,12 +31,18 @@ def test_whatever(var1, var2):
 
 ## Figures
 ```
-def setup_module(modue):
-def teardown_module(module):
-OR
-@pytest.figure(scope='module'):
+@pytest.fixture(scope='module'):
 def db()
-    db=connect()
+    db = {}
+    dsn = "host=machine.com port=5432..." 
+    db["conn"] = pg2.connect(f"{dsn}")
+    db["cur"] = db["conn"].cursor(cursor_factory=pg2e.DictCursor)
     yield db
     db.rollback()
+    
+def test_something(db):
+    db["cur"].execute("select count(*) from a_table;")
+    row = db["cur"].fetchone()
+    count = row["count"]
+    ...
 ```
