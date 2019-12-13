@@ -31,8 +31,8 @@ def test_whatever(var1, var2):
 
 ## Figures
 ```
-@pytest.fixture(scope='module'):
-def db()
+@pytest.fixture(scope='module')
+def db():
     db = {}
     dsn = "host=machine.com port=5432..." 
     db["conn"] = pg2.connect(f"{dsn}")
