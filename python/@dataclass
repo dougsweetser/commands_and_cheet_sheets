@@ -1,0 +1,9 @@
+# @dataclass
+
+When it is just data. Can use == to compare.
+```
+@dataclass
+class Card:
+    rank: str
+    suit: str
+```
