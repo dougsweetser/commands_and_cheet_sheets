@@ -6,4 +6,5 @@ When it is just data. Can use == to compare.
 class Card:
     rank: str
     suit: str
+    high_card: str = "Ace"
 ```
