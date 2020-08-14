@@ -46,3 +46,8 @@ def test_something(db):
     count = row["count"]
     ...
 ```
+
+## Need Fake Data? from faker import Faker
+
+faker = Faker("sv_SE", "fr_FR", "ja_JP")
+faker.name(), faker.company(), faker.profile(), faker.catch_phrase()
