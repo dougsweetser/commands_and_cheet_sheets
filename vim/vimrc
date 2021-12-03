@@ -1,0 +1,103 @@
+" Notes about vim
+"
+
+" reload vimrc
+autocmd! bufwritepost .vimrc source %
+
+" Better copy and paste
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+" mouse and backspace
+set mouse=a
+set bs=2
+
+let mapleader=","
+
+" move between tabs: ,n ,m
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" spelling: ]s, zg(ood)
+:setlocal spell spelllang=en_us
+
+" sort alphabetically: ,s
+vnoremap <Leader>s :sort<CR>
+
+" move block multiple times: < or >
+vnoremap < <gv
+vnoremap > >gv
+
+" Line numbers and lengths
+set number
+set tw=79
+set nowrap
+set fo-=t
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+" Color
+autocmd vimenter * let g_indent_guides_auto_colors = 0
+colorscheme desert
+
+" Format paragraphs: Q
+vmap Q gq
+nmap Q gqap
+
+" History
+set history=2000
+set undolevels=2000
+
+" Use spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
+
+" Case insensitive search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" No odd filesystem events for save
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Pathogen for package management
+" run 1x: mkdir -p ~/.vim/autoload ~/.vim/bundle 
+" curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
+syntax on
+" settings for bundles
+set laststatus=2   " powerline
+
+" airline, get buffer list on top
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 1
+
+" Folding code: F
+set nofoldenable
+
+" LustyJuggler: ,l list files  ,k list buffers
+set hidden
+let g:LustyJugglerDefaultMappings = 1
+nmap <silent> <leader>l :LustyJuggler<CR>
+nmap <silent> <leader>k :LustyBufferExplorer<CR>
+
+" YouCompleteMe: ^P pull words found ahead, ^N back
+set complete=.,b,u,]
+set wildmode=longest,list:longest
+
+" YankRing
+nnoremap <silent> <leader>y :YRShow<CR>
